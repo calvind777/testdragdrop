@@ -6,15 +6,18 @@
 </head>
 
 <body>
-	<div ondragenter = "showList(event)" ondragleave = "showList(event)"> 
+	<div id = "bop" onclick = "showList(event)"> 
 
 	</div>
 	<script> 
 		function showList(e)
 {
-	e.preventDefault();
+	var event = new DragEvent('ondragover');
+	document.getElementById("bop").dispatchEvent(event);
+	console.log(event);
 	console.log(e);
   console.log("over");
+
 }
 	</script>
 </body>
